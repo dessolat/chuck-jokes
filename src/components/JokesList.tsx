@@ -4,6 +4,7 @@ import Loader from './UI/Loader';
 import Error from './UI/Error';
 import JokesCounter from './JokesCounter';
 import Joke from './Joke';
+import { memo } from 'react';
 
 type Props = {
   jokesData: TJokesData | undefined;
@@ -29,4 +30,4 @@ const JokesList = ({ jokesData, isLoading, error }: Props) => {
     </>
   );
 };
-export default JokesList;
+export default memo(JokesList);
